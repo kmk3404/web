@@ -1,0 +1,186 @@
+<!DOCTYPE html> <!-- html 5버전으로 문서가 만들어진다 -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- equiv = equivalent(동등한)
+         호환을 어떻게 할것인가의 내용, ie의 가장 최신버전으로 보게한다.
+         만약에 크롬이 깔려있다면 크롬브라우저가 웹페이즈를 해석해서 보여주라는 
+         의미(크롬엔진을 사용하라는 의미)
+         ie로 열었다 할지라도 껍데기는 ie고 알맹이는 chrome이라는 의미
+         만약에 chrome이 깔려있지 않다면 ie의 최신버번(최상위)버전으로 해석-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 뷰포터의 사이즈를 디바이스의 사이즈로 맞추고, 
+         기본적인 확대정도를 1(100%), 확대 또는 축소되지 않은 상태로 출발한다. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="GreenArt">
+    <meta name="description" content="사이트연습하기">
+    <meta name="keywords" content="웹퍼블리셔, 접근성, html, 사이트">
+    <title>웹사이트</title>
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://kmk3404.dothome.co.kr/web/proweb/index.html">
+    <meta property="og:title" content="멋진사이트만들기">
+    <meta property="og.description" content="기본사이트만들기 연습하기">
+    <meta property="og.image" content="images/portfolio-thumb-1.jpg">
+    <!-- og는 open graph의 약자, 
+         오픈그래프의 속성을 이용해서 더 많은 정보를 입력할 수 있다.
+    og:type  ==> 페이지의 유형 
+    og:url   ==> 페이지의 주소(URL) 
+    og:title ==> 페이지의 이름(제목)
+    og:description  ==> 페이지의 간단한 설명
+    og:image ==> 페이지의 대표 이미지 주소 -->
+
+    <!-- 트위터 카드(Twitter Card)
+    웨페이지가 소셜 미디어(트위터)로 공유할때 우선적으로 활용되는 정보 -->
+    <!-- <meta property="twitter:card" content="summary">
+    <meta property="twitter:site" content="기본사이트">
+    <meta property="twitter:title" content="기본사이트">
+    <meta property="twitter:description" content="기본사이트 만들기">
+    <meta property="twitter:image" content="images/portfolio-thumb-1.jpg">
+    <meta property="twitter:url" content="http://kmk3404.dothome.co.kr/web/proweb/index.html"> -->
+    <!-- twitter:card ==> 페이지의 유형(summary, player..)
+    twitter:site ==> 속한 사이트의 이름 -->
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/reset.css"> -->
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+
+<body>
+    <header>
+        <div class="container clearfix">
+            <h1 class="logo">
+                <a href="http://kmk3404.dothome.co.kr/web/proweb/index.html">
+                    Logo
+                </a>
+            </h1><!-- logo -->
+            <nav>
+                <ul class="clearfix">
+                    <li><a href="http://kmk3404.dothome.co.kr/web/proweb/index.html">Home</a></li>
+                    <li><a href="http://kmk3404.dothome.co.kr/web/proweb/portfolio.html">Portfolio</a></li>
+                    <li><a href="http://kmk3404.dothome.co.kr/web/proweb/about.html">About</a></li>
+                </ul>
+            </nav>
+        </div><!-- container -->
+    </header>
+
+    <div class="banner">
+        <div class="banner_list">
+            <div class="slide slide1">
+                <h2 class="main_tt fancy-box red">project title</h2>
+                <div class="slide_contents">
+                    <p>This is a small description. Keep it simple and to the point.</p>
+                    <a href="#" class="btn">SEE DETAILS</a>
+                </div><!-- slide_contents -->
+            </div><!-- slide1 -->
+            <div class="slide slide2">
+                <h2 class="main_tt fancy-box red">project title</h2>
+                <div class="slide_contents">
+                    <p>This is a small description. Keep it simple and to the point.</p>
+                    <a href="#" class="btn">SEE DETAILS</a>
+                </div><!-- slide_contents -->
+            </div><!-- slide2 -->
+            <div class="slide slide3">
+                <h2 class="main_tt fancy-box red">project title</h2>
+                <div class="slide_contents">
+                    <p>This is a small description. Keep it simple and to the point.</p>
+                    <a href="#" class="btn">SEE DETAILS</a>
+                </div><!-- slide_contents -->
+            </div><!-- slide3 -->
+        </div><!-- banner_list -->
+    </div><!-- banner -->
+
+    <div class="main_content container">
+        <h3 class="content_tt">RECENT PROJECTS</h3>
+        <p class="project_link">
+            <a href="#">See all projects &rarr;</a>
+        </p>
+        <ul class="project_list clearfix">
+            <li>
+                <img src="images/portfolio-thumb-1.jpg" alt="portfolio1">
+                <div class="hover_contents">
+                    <h4>This is the project name</h4>
+                    <a href="#">CLICK FOR DETAILS</a>
+                </div>
+            </li>
+            <li>
+                <img src="images/portfolio-thumb-2.jpg" alt="portfolio2">
+                <div class="hover_contents">
+                    <h4>This is the project name</h4>
+                    <a href="#">CLICK FOR DETAILS</a>
+                </div>
+            </li>
+            <li>
+                <img src="images/portfolio-thumb-3.jpg" alt="portfolio3">
+                <div class="hover_contents">
+                    <h4>This is the project name</h4>
+                    <a href="#">CLICK FOR DETAILS</a>
+                </div>
+            </li>
+            <li>
+                <img src="images/portfolio-thumb-4.jpg" alt="portfolio4">
+                <div class="hover_contents">
+                    <h4>This is the project name</h4>
+                    <a href="#">CLICK FOR DETAILS</a>
+                </div>
+            </li>
+            <li>
+                <img src="images/portfolio-thumb-5.jpg" alt="portfolio5">
+                <div class="hover_contents">
+                    <h4>This is the project name</h4>
+                    <a href="#">CLICK FOR DETAILS</a>
+                </div>
+            </li>
+            <li>
+                <img src="images/portfolio-thumb-6.jpg" alt="portfolio6">
+                <div class="hover_contents">
+                    <h4>This is the project name</h4>
+                    <a href="#">CLICK FOR DETAILS</a>
+                </div>
+            </li>
+        </ul><!-- project_list -->
+    </div><!-- main_content -->
+
+    <footer>
+        <span class="envelope_icon fancy-box orange">
+            <i class="fas fa-envelope"></i>
+        </span><!-- envelope_icon -->
+        <div class="subscribe">
+            <p>Wanna see my latest photos? Enter your email below and I'll send you one email month with the latest updates.</p>
+            <form action="#">
+                <input type="email" name="email" placeholder="Your email address">
+                <input type="submit" value="SUBSCRIBE" class="btn">
+            </form>
+        </div><!-- subscribe -->
+
+        <p class="share clearfix">
+            <a href="#">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </p>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $('.banner_list').slick({
+            dots: true,
+            autoplay: true
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,285 @@
+@charset "UTF-8";
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+li {
+    list-style: none;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+/* layout */
+#wrap {
+    padding-top: 40px;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+#aside {
+    float: left;
+    width: 270px;
+}
+
+#contents {
+    float: right;
+    width: 700px;
+}
+
+#footer {
+    /*     형제중에서 형들이 float이 설정되었을때
+    동생인 요소도 반드시 float이 설정되어야한다.
+
+    형이 float이 설정되어 있지 않고
+    동생들이 float이 설정되어 있다면
+    형은 float이 설정되어 있지 않아도 된다. */
+    float: left;
+    width: 100%;
+}
+
+
+
+/* aside */
+#aside {}
+
+#aside h1 {}
+
+#aside h1 a {}
+
+#aside h1 a img {
+    width: 150px;
+}
+
+#aside .nav {}
+
+#aside .nav ul {}
+
+#aside .nav ul li {
+    position: relative;
+    padding: 10px;
+    padding-bottom: 15px;
+    background: #f1f1f1;
+}
+
+#aside .nav ul li a {
+    font-size: 23px;
+}
+
+#aside .nav ul li a:hover {
+    text-decoration: underline;
+}
+
+#aside .nav ul li ul.submenu {
+    display: none;
+    position: absolute;
+    right: -131px;
+    top: 0;
+    z-index: 100;
+}
+
+#aside .nav ul li ul.submenu li {
+    padding: 0;
+}
+
+#aside .nav ul li ul.submenu li a {
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+#aside .nav ul li ul.submenu li a:hover {
+    text-decoration: none;
+}
+
+/* contents/ */
+/* banner */
+#banner {
+    height: 384px;
+}
+
+#banner .slideList {
+    position: relative;
+}
+
+#banner .slideList .slideImg {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#banner .slideList .slideImg h2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 30px;
+    /* 공간 */
+    border-radius: 25px;
+    /* 영역의 라운드 */
+}
+
+#banner .slideList .slideImg img {
+    width: 100%;
+    display: block;
+    /* 이미지에 예측공간이 생길때 처리방법
+    -원인은 img가 inline요소이기 떄문 */
+    /* 1)display: block; 2)vartical-align:top; */
+}
+
+/* tab */
+.tab {
+    position: relative;
+    padding: 40px 0;
+    text-align: center;
+    height: 200px;
+}
+
+.tab ul {}
+
+.tab>ul>li {
+    display: inline;
+}
+
+.tab ul li a {
+    font-size: 24px;
+    color: #999;
+}
+
+.tab ul li.active a {
+    color: #000;
+}
+
+.tab ul li ul {
+    position: absolute;
+    left: 0;
+    top: 100px;
+    width: 100%;
+}
+
+/* float, position:absolute, position:fixed..은
+영역을 자신의 자식만큼만 차지한다
+그렇다고 inline요소가 되는것은 아니다 */
+.tab ul li ul li {
+    float: left;
+    width: 20%;
+}
+
+.tab ul li ul li a {
+    font-size: 14px;
+}
+
+.tab ul li ul li a img {
+    width: 100px;
+}
+
+.tab ul li ul li a span {
+    display: block;
+}
+
+.tab ul li:last-child ul {
+    display: none;
+}
+
+/* layer */
+.layer {
+    background: #f7f7f7;
+    padding: 15px;
+}
+
+.layer div {
+    position: relative;
+    float: left;
+    width: 32%;
+    box-sizing: border-box;
+    margin-right: 2%;
+    /* margin이나 padding의 백분률의 기준은 부모의 넓이이다. */
+    padding: 6%;
+    border: 2px solid #ccc;
+    text-align: center;
+    background: #fff;
+}
+
+.layer div:last-child {
+    margin-right: 0;
+}
+
+.layer div h3 {}
+
+.layer div img {
+    width: 100px;
+    padding: 20px 0;
+}
+
+.layer div ul {}
+
+.layer div ul li {
+    /* 말줄임말의 짝지 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    /* 말줄임말의 짝지 */
+}
+
+.layer div .more {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    line-height: 11px;
+    font-weight: bold;
+}
+
+/* footer */
+#footer {
+    background: #edf2f8;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+
+#footer h2 {
+    float: left;
+}
+
+#footer h2 img {
+    width: 80px;
+}
+
+#footer address {
+    float: left;
+    font-style: normal;
+    padding: 20px 0 0 20px;
+}
+
+#footer .sns {
+    float: right;
+    padding-top: 20px;
+}
+
+#footer .sns ul {}
+
+#footer .sns ul li {
+    float: left;
+}
+
+#footer .sns ul li a {}
+
+#footer .sns ul li a img {
+    width: 60px;
+}
